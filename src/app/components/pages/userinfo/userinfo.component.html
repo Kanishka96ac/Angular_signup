@@ -1,0 +1,27 @@
+  
+<div class="container">
+    <h1 style="text-align: center; font-size: 60px; color: darkblue; font-weight: bolder; padding-top: 10vh;">Welcome To The Green-care</h1>
+    <div class="row dataset">
+        <div *ngIf = "authservice.currentUser">
+            <h2 style="font-size: 30px; color: darkslateblue;" class="alldata">
+                user information
+            </h2 >
+            <table>
+                <tr>
+                    <td> <h4><b style="padding-top: 4%;">  User ID:  </b></h4></td>
+                    <td> <h4>{{authservice.currentUserId}}</h4></td>
+                </tr>
+                <tr>
+                    <td> <h4><b style="padding-top: 4%;">  User email:  </b></h4></td>
+                    <td> <h4>{{authservice.currentUserName}}</h4></td>
+                </tr>
+            </table>
+            
+            
+            <a href="" routerLink="/login"><button  type="submit" mat-raised-button color="primary" (click)="authservice.singout()">Logout</button></a>
+            
+            
+            
+        </div>
+    </div>
+</div>

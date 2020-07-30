@@ -1,0 +1,55 @@
+<div class="signup_center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class=""></div> -->
+      <mat-card-title>GREEN-CARE</mat-card-title>
+      <mat-card-subtitle>Sign Up</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+
+
+      <form (ngSubmit)="register()">
+
+        <div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" name="email" matInput [(ngModel)]="email" placeholder="Enter Your Email" value=""
+                required />
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" name="password" matInput [(ngModel)]="password" placeholder="Enter Your Password" required />
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+          </div>
+
+        <a href="" routerLink="/login"><button type="submit" class="mat_signin signup_btn" mat-raised-button
+            color="primary">Sign In</button></a>
+        <button type="submit" class="mat_signin signup_btn" mat-raised-button color="primary">Sign Up</button>
+
+      </form>
+
+      <div>
+        <p *ngIf= "errorMessage.length > 0 ">
+            {{errorMessage}}
+        </p>
+
+        <p *ngIf= "error.message.length > 0 ">
+            {{error.message}}
+        </p>
+
+        <p *ngIf= "message.length > 0 ">
+            {{message}}
+        </p>
+    </div>
+
+    </mat-card-content>
+  </mat-card>
+
+</div>
